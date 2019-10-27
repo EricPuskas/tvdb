@@ -7,7 +7,7 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
 const helmet = require("helmet");
 const compression = require("compression");
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const time = 2500000000; // 1 month
 
 // Enable middleware to recognise the incoming request object as a JSON Object.
