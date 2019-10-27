@@ -11,7 +11,7 @@ import { getToken } from "./actions/token";
 // Utilities
 import setToken from "./utils/setToken";
 
-import "./App.scss";
+// Redux Store
 import store from "./store";
 
 // Check for token

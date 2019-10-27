@@ -7,6 +7,7 @@ import uuid from "uuid/v4";
 import SearchForm from "../SearchForm/SearchForm";
 import Show from "../Show/Show";
 import Logo from "../Logo/Logo";
+import Loader from "../Loader/Loader";
 import "./SearchResults.scss";
 
 const SearchResults = ({
@@ -15,19 +16,18 @@ const SearchResults = ({
   history,
   location,
   errors: { error },
-  shows: { search_results }
+  shows: { search_results, loading }
 }) => {
   let displaySearchText = queryString.parse(location.search).q;
 
   const [searchText, setSearchText] = useState("");
   useEffect(() => {
-    let search_value = queryString.parse(location.search);
-    if (search_value.q !== "") {
+    if (displaySearchText !== "") {
       clearErrors();
-      searchSeries(search_value.q);
-      setSearchText(search_value.q);
+      searchSeries(displaySearchText);
+      setSearchText(displaySearchText);
     }
-  }, [searchSeries, location.search, clearErrors]);
+  }, [searchSeries, displaySearchText, clearErrors]);
 
   useEffect(() => {
     return () => {
@@ -50,6 +50,7 @@ const SearchResults = ({
           searchText={searchText}
           setSearchText={setSearchText}
           history={history}
+          loading={loading}
         />
       </div>
       {results_count.length > 0 ? (
@@ -59,7 +60,10 @@ const SearchResults = ({
           <strong>{displaySearchText}</strong>".
         </p>
       ) : null}
-      {!error && <div className="SearchResults-results">{results}</div>}
+      {loading && <Loader />}
+      {!error && !loading && (
+        <div className="SearchResults-results">{results}</div>
+      )}
       {error && <h1 className="text-center"> {error} </h1>}
     </div>
   );

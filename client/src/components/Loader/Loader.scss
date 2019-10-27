@@ -1,0 +1,19 @@
+.Loader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+
+  img {
+    height: auto;
+    display: block;
+    max-width: 80px;
+  }
+
+  h2 {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+  }
+}

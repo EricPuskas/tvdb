@@ -1,8 +1,9 @@
 import axios from "axios";
-import { GET_ERRORS, CLEAR_ERRORS, SEARCH, CLEAN_UP } from "./types";
+import { GET_ERRORS, CLEAR_ERRORS, SEARCH, CLEAN_UP, LOADING } from "./types";
 
 export const searchSeries = data => async dispatch => {
   try {
+    dispatch(loadingSearch());
     let res = await axios.post("/api/search/series", { searchText: data });
     dispatch({
       type: SEARCH,
@@ -16,6 +17,11 @@ export const searchSeries = data => async dispatch => {
   }
 };
 
+export const loadingSearch = () => {
+  return {
+    type: LOADING
+  };
+};
 export const cleanUp = () => {
   return {
     type: CLEAN_UP

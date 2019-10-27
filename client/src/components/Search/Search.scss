@@ -1,5 +1,5 @@
 .Search {
-  height: 100%;
+  height: 80vh;
   margin: 0 auto;
   justify-content: flex-start;
   margin-top: 5rem;
@@ -58,7 +58,7 @@
   border-top-right-radius: 4.25rem;
   border-bottom-right-radius: 4.25rem;
   padding: 0.5rem 1rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #fff;
   background-color: #a21616;
   border-color: #a21616;
@@ -71,6 +71,9 @@
     background-color: #5483fa;
     border-color: #5483fa;
   }
+  .fas.fa-search {
+    margin-right: 0.25rem;
+  }
 }
 
 .Search-suggestions {
@@ -79,6 +82,14 @@
   font-size: 1.1rem;
   padding: 0.5rem;
   line-height: 1;
+  border-left: 1px solid #555555;
+  border-right: 1px solid #555555;
+  &:first-child {
+    border-top: 1px solid #555555;
+  }
+  &:last-child {
+    border-bottom: 1px solid #555555;
+  }
 
   &:hover {
     background-color: #a21616 !important;
@@ -124,4 +135,8 @@
       max-width: 100%;
     }
   }
+}
+
+.SearchSuggestionsBox {
+  box-shadow: 1px 0px 5px 1px #aaaaaa;
 }

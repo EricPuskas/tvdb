@@ -1,12 +1,21 @@
 .SearchResults-Search {
   display: flex;
   justify-content: center;
+  flex-direction: row;
   align-items: center;
   max-width: 800px;
 }
 
 .SearchResults {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
   margin-top: 1rem;
+  margin-bottom: 0rem;
+  min-height: 87vh;
+  padding: 0 15px;
+  flex-wrap: wrap;
   .Logo {
     max-width: 200px;
     img {
@@ -15,7 +24,6 @@
   }
   form {
     width: 100%;
-    margin-left: 1rem;
     margin-bottom: 1rem;
   }
   #__listItemProps {
@@ -35,5 +43,15 @@
   margin-top: 1rem;
   img {
     margin-top: 1rem;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .SearchResults-Search {
+    flex-direction: column;
   }
 }

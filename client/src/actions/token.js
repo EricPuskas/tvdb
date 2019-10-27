@@ -6,7 +6,6 @@ import { GET_TOKEN, GET_ERRORS, CLEAR_ERRORS } from "./types";
 export const getToken = () => async dispatch => {
   try {
     let res = await axios.post("/api/auth");
-    console.log(res.data);
     const { token } = res.data;
     localStorage.setItem("token", token);
     setToken(token);

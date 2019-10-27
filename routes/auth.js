@@ -3,7 +3,7 @@ const router = express.Router();
 const { authenticate } = require("../controllers/auth");
 
 // @route   POST api/auth
-// @desc    Login and get token
+// @desc    get Token from API
 // @access  Public
 router.post("/", authenticate);
 
