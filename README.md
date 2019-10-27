@@ -14,3 +14,4 @@
 
 - You will need to create a .env file in the root of the project
 - Provide an `API_KEY` by signing up on [thetvdb.com](https://www.thetvdb.com/)
+- If you are running AdBlock, the images coming from the API will be blocked, disable it to be able to see the images, otherwise a placeholder image will be shown.
