@@ -1,11 +1,11 @@
 import React from "react";
 import NoBannerFound from "../../assets/img/no_banner.png";
+import replaceImage from "../../utils/replaceImage";
 
 const ShowBanner = ({ banner, title }) => {
-  const replaceImage = e => (e.target.src = NoBannerFound);
   return (
     <img
-      onError={e => replaceImage(e)}
+      onError={e => replaceImage(e, NoBannerFound)}
       src={`https://www.thetvdb.com/banners/${banner}`}
       alt={title}
     />

@@ -21,11 +21,11 @@ const SearchFeed = ({ search_results, error, displaySearchText, loading }) => {
           <strong>{displaySearchText}</strong>".
         </p>
       ) : null}
-      {loading && <Loader />}
+      {loading && !error && <Loader />}
       {!error && !loading && (
         <div className="SearchResults-results">{results}</div>
       )}
-      {error && <h1 className="text-center"> {error} </h1>}
+      {error && <h1 className="Error text-center"> {error} </h1>}
     </>
   );
 };

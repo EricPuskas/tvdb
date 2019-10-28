@@ -1,7 +1,7 @@
 .accordion {
   border: 1px solid #7d7d7d;
-  padding: 5px 10px;
   background: #e0e0e0;
+  color: #404040;
   text-align: center;
   h2 {
     font-size: 1.3rem;
@@ -9,6 +9,14 @@
   }
 }
 
+.accordion-pointer {
+  padding: 5px 10px;
+  cursor: pointer;
+  &:hover {
+    background: gray;
+    color: #fff;
+  }
+}
 .accordion-open {
   border: 1px solid #f4f5fa;
   padding: 0;

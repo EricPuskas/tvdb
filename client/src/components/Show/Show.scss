@@ -75,16 +75,6 @@
     max-width: 100%;
   }
 }
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .Show-Search {
-    flex-direction: column;
-
-    form {
-      margin-left: 0;
-    }
-  }
-}
 
 .styles_overlay__CLSq- {
   background: rgba(0, 0, 0, 0.06);
@@ -137,4 +127,31 @@
 
 .filler {
   min-height: 65vh;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Show-Search {
+    flex-direction: column;
+
+    form {
+      margin-left: 0;
+    }
+  }
+  .ShowItem {
+    .row {
+      p {
+        text-align: center;
+      }
+
+      .overview {
+        p {
+          text-align: start;
+        }
+        h3 {
+          text-align: center;
+        }
+      }
+    }
+  }
 }

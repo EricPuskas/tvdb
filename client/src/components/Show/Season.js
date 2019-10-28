@@ -4,6 +4,8 @@ import moment from "moment";
 import Rating from "react-rating";
 import { connect } from "react-redux";
 import { loadModal } from "../../actions/modal";
+import replaceImage from "../../utils/replaceImage";
+import NoImageFound from "../../assets/img/no_image.png";
 
 const Season = ({ episodes, loadModal }) => {
   const content = episodes.map(ep => {
@@ -36,6 +38,7 @@ const Season = ({ episodes, loadModal }) => {
             ) : null}
           </p>
           <img
+            onError={e => replaceImage(e, NoImageFound)}
             src={`https://www.thetvdb.com/banners/${ep.filename}`}
             alt={ep.episodeName}
           />

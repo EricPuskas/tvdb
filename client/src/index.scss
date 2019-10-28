@@ -89,3 +89,18 @@ img {
   height: auto;
   display: block;
 }
+
+.Error {
+  display: flex;
+  margin: 1rem;
+  justify-content: center;
+  color: #a21616;
+}
+
+.far.fa-star {
+  color: #5483fa;
+}
+
+.fas.fa-star:before {
+  color: #5483fa;
+}

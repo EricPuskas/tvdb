@@ -81,7 +81,8 @@ exports.getShow = async (req, res) => {
 
     return res.json(result);
   } catch (err) {
-    console.log(err);
+    console.log(err.error.Error);
+    return res.status(404).json(err.error.Error);
   }
 };
 

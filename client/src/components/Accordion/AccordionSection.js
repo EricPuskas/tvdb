@@ -27,17 +27,17 @@ class AccordionSection extends Component {
     });
     return (
       <div className={accordion}>
-        <div onClick={onClick} style={{ cursor: "pointer", padding: "0 15px" }}>
+        <div onClick={onClick} className="accordion-pointer">
           <h2>{label}</h2>
           <div style={{ float: "right" }}>
             {!isOpen && (
               <span>
-                <i className="fas fa-plus"></i>
+                <i className="fas fa-caret-down"></i>
               </span>
             )}
             {isOpen && (
               <span style={{ color: "#fff" }}>
-                <i className="fas fa-minus"></i>
+                <i className="fas fa-caret-up"></i>
               </span>
             )}
           </div>
