@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { searchSeries, cleanUp, clearErrors } from "../../actions/api";
 import { withRouter } from "react-router-dom";
 import queryString from "query-string";
-import uuid from "uuid/v4";
 import SearchForm from "../SearchForm/SearchForm";
-import Show from "../Show/Show";
+import SearchFeed from "./SearchFeed";
 import Logo from "../Logo/Logo";
-import Loader from "../Loader/Loader";
 import "./SearchResults.scss";
 
 const SearchResults = ({
@@ -20,51 +18,30 @@ const SearchResults = ({
 }) => {
   let displaySearchText = queryString.parse(location.search).q;
 
-  const [searchText, setSearchText] = useState("");
-  useEffect(() => {
-    if (displaySearchText !== "") {
-      clearErrors();
-      searchSeries(displaySearchText);
-      setSearchText(displaySearchText);
-    }
-  }, [searchSeries, displaySearchText, clearErrors]);
-
   useEffect(() => {
     return () => {
       cleanUp();
     };
   }, [location]);
 
-  const results_count = [];
-  const results = search_results.map(show => {
-    if (show.overview) {
-      results_count.push(show.id);
-      return <Show key={uuid()} show={show} />;
-    } else return null;
-  });
   return (
     <div className="SearchResults">
       <div className="SearchResults-Search">
         <Logo />
         <SearchForm
-          searchText={searchText}
-          setSearchText={setSearchText}
           history={history}
+          displaySearchText={displaySearchText}
           loading={loading}
+          searchSeries={searchSeries}
+          clearErrors={clearErrors}
         />
       </div>
-      {results_count.length > 0 ? (
-        <p className="text-center">
-          Found {results_count.length}{" "}
-          {results_count.length === 1 ? "result" : "results"} matching "
-          <strong>{displaySearchText}</strong>".
-        </p>
-      ) : null}
-      {loading && <Loader />}
-      {!error && !loading && (
-        <div className="SearchResults-results">{results}</div>
-      )}
-      {error && <h1 className="text-center"> {error} </h1>}
+      <SearchFeed
+        error={error}
+        search_results={search_results}
+        loading={loading}
+        displaySearchText={displaySearchText}
+      />
     </div>
   );
 };

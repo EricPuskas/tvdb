@@ -1,17 +1,14 @@
 const request = require("request");
+const configureOptions = require("../utils/configureOptions");
 
 exports.handleSeriesSearch = async (req, res) => {
   try {
-    let data = {
-      apikey: process.env.API_KEY
-    };
     request(
-      {
-        url: `https://api.thetvdb.com/search/series?name=${req.body.searchText}`,
-        method: "GET",
-        json: data,
-        headers: { Authorization: "Bearer " + req.header("Authorization") }
-      },
+      configureOptions(
+        `https://api.thetvdb.com/search/series?name=${req.body.searchText}`,
+        "GET",
+        req
+      ),
       function(err, resp, data) {
         if (err || data.Error) {
           if (data.Error) return res.status(401).json(data.Error);

@@ -1,9 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Search from "./components/Search/Search";
+import Show from "./components/Show/Show";
 import SearchResults from "./components/SearchResults/SearchResults";
 import Footer from "./components/Footer/Footer";
 import jwt_decode from "jwt-decode";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 // Actions
 import { getToken } from "./actions/token";
@@ -32,13 +34,16 @@ if (!localStorage.token) {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="container-fluid">
-        <Switch>
-          <Route exact path="/" component={Search} />
-          <Route exact path="/search" component={SearchResults} />
-        </Switch>
-        <Footer />
-      </div>
+      <ScrollToTop>
+        <div className="container-fluid">
+          <Switch>
+            <Route exact path="/" component={Search} />
+            <Route exact path="/search" component={SearchResults} />
+            <Route exact path="/shows/:id" component={Show} />
+          </Switch>
+          <Footer />
+        </div>
+      </ScrollToTop>
     </BrowserRouter>
   );
 };

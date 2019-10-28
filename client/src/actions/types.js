@@ -4,3 +4,4 @@ export const LOADING = "LOADING";
 export const GET_TOKEN = "GET_TOKEN";
 export const SEARCH = "SEARCH";
 export const CLEAN_UP = "CLEAN_UP";
+export const GET_SHOW = "GET_SHOW";

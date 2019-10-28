@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const auth = require("./routes/auth");
+const shows = require("./routes/shows");
 const search = require("./routes/search");
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
@@ -31,6 +32,7 @@ app.all("*", (req, res, next) => {
 // Router middleware
 app.use("/api/auth", auth);
 app.use("/api/search", search);
+app.use("/api/shows", shows);
 
 app.use(express.static("client/build", { maxAge: time }));
 app.use((req, res, next) => {

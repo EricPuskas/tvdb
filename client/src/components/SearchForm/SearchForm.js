@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Suggestion from "search-suggestion";
 import escapeRegex from "../../utils/escapeRegex";
 import createSuggestions from "../../utils/createSuggestions";
@@ -6,8 +6,27 @@ import "./SearchInput";
 import tvShows from "../../utils/tvShows";
 import SearchInput from "./SearchInput";
 
-const SearchForm = ({ history, searchText, setSearchText, loading }) => {
+const SearchForm = ({
+  history,
+  loading,
+  displaySearchText,
+  clearErrors,
+  searchSeries
+}) => {
   const [suggestions, setSuggestions] = useState([]);
+  const [searchText, setSearchText] = useState("");
+
+  useEffect(() => {
+    if (
+      displaySearchText &&
+      displaySearchText !== "" &&
+      window.location.pathname.match("search")
+    ) {
+      clearErrors();
+      searchSeries(displaySearchText);
+      setSearchText(displaySearchText);
+    }
+  }, [searchSeries, displaySearchText, clearErrors]);
 
   const onSearchChange = e => {
     let value = e.target.value;
