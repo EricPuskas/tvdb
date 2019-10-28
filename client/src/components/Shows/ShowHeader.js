@@ -1,26 +1,25 @@
 import React from "react";
 import Moment from "react-moment";
-import moment from "moment";
+import isValidDate from "../../utils/isValidDate";
 
 const ShowHeader = ({ title, firstAired, network }) => {
-  let isValidDate = moment(firstAired).isValid();
   return (
     <>
       <h2> {title} </h2>
       <hr />
-      <p>
+      <div>
         First Aired:{" "}
         <strong>
-          {isValidDate ? (
+          {isValidDate(firstAired) ? (
             <Moment format="MMM DD (YYYY)">{firstAired}</Moment>
           ) : (
             "Unknown"
           )}
         </strong>
-      </p>
-      <p>
-        Network: <strong>{network ? network : "Unknown"}</strong>{" "}
-      </p>
+      </div>
+      <div>
+        Network: <strong>{network ? network : "Unknown"}</strong>
+      </div>
       <hr />
     </>
   );

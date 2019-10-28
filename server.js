@@ -2,15 +2,21 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
+const PORT = process.env.PORT || 3001;
+const time = 2500000000; // 1 month cache
+
+// Optimization and Security
+const helmet = require("helmet");
+const compression = require("compression");
+
+// Swagger Docs
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger.json");
+
+// Routes
 const auth = require("./routes/auth");
 const shows = require("./routes/shows");
 const search = require("./routes/search");
-const swaggerUi = require("swagger-ui-express");
-const swaggerDocument = require("./swagger.json");
-const helmet = require("helmet");
-const compression = require("compression");
-const PORT = process.env.PORT || 3001;
-const time = 2500000000; // 1 month
 
 // Enable middleware to recognise the incoming request object as a JSON Object.
 app.use(express.json());
@@ -34,14 +40,14 @@ app.use("/api/auth", auth);
 app.use("/api/search", search);
 app.use("/api/shows", shows);
 
-app.use(express.static("client/build", { maxAge: time }));
-app.use((req, res, next) => {
-  res.header("Cache-Control", "max-age= 2500000000");
-  next();
-});
-
+// Production Optimizations
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
+  app.use((req, res, next) => {
+    res.header("Cache-Control", "max-age= 2500000000");
+    next();
+  });
+  app.use(express.static("client/build", { maxAge: time }));
   // Set static folder
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));

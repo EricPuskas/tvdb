@@ -151,11 +151,7 @@ const Show = ({ getShow, match, shows, history, errors }) => {
         </div>
       );
     } else {
-      content = (
-        <div className="Error">
-          <h1>{error}</h1>
-        </div>
-      );
+      content = <h3 className="Error">{error}</h3>;
     }
     return (
       <div>

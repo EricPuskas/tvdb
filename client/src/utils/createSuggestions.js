@@ -1,3 +1,4 @@
+// https://www.regextester.com
 const filterInput = input => {
   return input.replace(/[^\w\s]/gi, "");
 };

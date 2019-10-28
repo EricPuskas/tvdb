@@ -1,26 +1,17 @@
-const request = require("request");
+const rp = require("request-promise-native");
 
 exports.authenticate = async (req, res) => {
   try {
-    let data = {
-      apikey: process.env.API_KEY
+    const options = {
+      url: "https://api.thetvdb.com/login",
+      method: req.method,
+      json: { apikey: process.env.API_KEY }
     };
-    request(
-      {
-        url: "https://api.thetvdb.com/login",
-        method: req.method,
-        json: data
-      },
-      function(err, resp, data) {
-        if (err || data.Error) {
-          if (data.Error) return res.status(401).json(data.Error);
-          if (err) return res.status(401).json(err.message);
-        } else {
-          return res.status(200).json(data);
-        }
-      }
-    );
-  } catch (err) {}
+    let response = await rp(options);
+    return res.status(200).json(response);
+  } catch (err) {
+    return res.status(err.statusCode).json(err.error.Error);
+  }
 };
 
 module.exports = exports;

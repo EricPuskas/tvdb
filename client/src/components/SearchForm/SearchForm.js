@@ -5,6 +5,7 @@ import createSuggestions from "../../utils/createSuggestions";
 import "./SearchInput";
 import tvShows from "../../utils/tvShows";
 import SearchInput from "./SearchInput";
+import "./SearchForm.scss";
 
 const SearchForm = ({
   history,

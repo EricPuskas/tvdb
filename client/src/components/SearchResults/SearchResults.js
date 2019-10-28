@@ -1,11 +1,17 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { searchSeries, cleanUp, clearErrors } from "../../actions/api";
 import { withRouter } from "react-router-dom";
 import queryString from "query-string";
+
+// Actions
+import { searchSeries, cleanUp, clearErrors } from "../../actions/api";
+
+//Components
 import SearchForm from "../SearchForm/SearchForm";
 import SearchFeed from "./SearchFeed";
 import Logo from "../Logo/Logo";
+
+//SCSS
 import "./SearchResults.scss";
 
 const SearchResults = ({
@@ -16,10 +22,10 @@ const SearchResults = ({
   errors: { error },
   shows: { search_results, loading }
 }) => {
-  let displaySearchText = queryString.parse(location.search).q;
-
+  let displaySearchText = queryString.parse(location.search).q; //=> {q: 'searched text'}
   useEffect(() => {
     return () => {
+      // Clean up lingering search results
       cleanUp();
     };
   }, [location]);

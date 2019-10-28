@@ -5,6 +5,7 @@ import Loader from "../Loader/Loader";
 
 const SearchFeed = ({ search_results, error, displaySearchText, loading }) => {
   const results_count = [];
+
   const results = search_results.map(show => {
     if (show.overview) {
       results_count.push(show.id);
@@ -12,22 +13,26 @@ const SearchFeed = ({ search_results, error, displaySearchText, loading }) => {
     } else return null;
   });
 
+  const matchingText =
+    results_count.length > 0 ? (
+      <p className="text-center">
+        Found {results_count.length}{" "}
+        {results_count.length === 1 ? "result" : "results"} matching "
+        <strong>{displaySearchText}</strong>".
+      </p>
+    ) : null;
+
   return (
     <>
-      {results_count.length > 0 ? (
-        <p className="text-center">
-          Found {results_count.length}{" "}
-          {results_count.length === 1 ? "result" : "results"} matching "
-          <strong>{displaySearchText}</strong>".
-        </p>
-      ) : null}
+      {matchingText}
       {loading && !error && <Loader />}
       {!error && !loading && (
         <div className="SearchResults-results">{results}</div>
       )}
-      {error && <h1 className="Error text-center"> {error} </h1>}
+      {error && <h3 className="Error"> {error} </h3>}
     </>
   );
 };
 
+// using memo HOC to prevent unnecessary re-renders when typing in the form
 export default memo(SearchFeed);

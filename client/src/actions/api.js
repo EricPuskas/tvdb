@@ -10,7 +10,7 @@ import {
 
 export const searchSeries = data => async dispatch => {
   try {
-    dispatch(loadingSearch());
+    dispatch(loading());
     let res = await axios.post("/api/search/series", { searchText: data });
     dispatch({
       type: SEARCH,
@@ -26,7 +26,7 @@ export const searchSeries = data => async dispatch => {
 
 export const getShow = id => async dispatch => {
   try {
-    dispatch(loadingSearch());
+    dispatch(loading());
     let res = await axios.get(`/api/shows/${id}`);
     dispatch({
       type: GET_SHOW,
@@ -40,18 +40,18 @@ export const getShow = id => async dispatch => {
   }
 };
 
-export const loadingSearch = () => {
+export const loading = () => {
   return {
     type: LOADING
   };
 };
+
 export const cleanUp = () => {
   return {
     type: CLEAN_UP
   };
 };
 
-// Clear Errors
 export const clearErrors = () => {
   return {
     type: CLEAR_ERRORS

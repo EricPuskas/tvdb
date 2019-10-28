@@ -76,13 +76,6 @@ body {
   border-left-color: crimson;
 }
 
-@media only screen and (max-width: 600px) {
-  .siteRating {
-    display: block;
-    margin: 1rem;
-  }
-}
-
 img {
   border-style: none;
   max-width: 100%;
@@ -103,4 +96,38 @@ img {
 
 .fas.fa-star:before {
   color: #5483fa;
+}
+
+.btn-primary {
+  border-top-right-radius: 4.25rem;
+  border-bottom-right-radius: 4.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #a21616;
+  border-color: #a21616;
+  text-shadow: 2px 1px 3px black;
+  &:not(:disabled):not(.disabled):active,
+  &:focus,
+  &:active,
+  &:hover {
+    color: #fff;
+    background-color: #5483fa;
+    border-color: #5483fa;
+  }
+  .fas.fa-search {
+    margin-right: 0.25rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .btn-primary {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .siteRating {
+    display: block;
+    margin: 1rem;
+  }
 }

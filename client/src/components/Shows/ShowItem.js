@@ -24,7 +24,7 @@ const ShowItem = ({ show }) => {
               <ShowBanner banner={show.banner} title={show.seriesName} />
             </div>
             <div className="col-12 overview">
-              <ShowDescription overview={show.overview} />
+              <ShowDescription maxChars={350} overview={show.overview} />
             </div>
           </div>
         </Link>

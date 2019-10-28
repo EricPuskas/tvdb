@@ -1,6 +1,6 @@
 import React from "react";
 import Moment from "react-moment";
-import moment from "moment";
+import isValidDate from "../../utils/isValidDate";
 import Rating from "react-rating";
 import { connect } from "react-redux";
 import { loadModal } from "../../actions/modal";
@@ -9,9 +9,7 @@ import NoImageFound from "../../assets/img/no_image.png";
 
 const Season = ({ episodes, loadModal }) => {
   const content = episodes.map(ep => {
-    let isValidDate = moment(ep.firstAired).isValid();
-    let MODAL_PROPS;
-    MODAL_PROPS = {
+    let MODAL_PROPS = {
       id: ep.id,
       title: ep.episodeName,
       width: "40%",
@@ -33,7 +31,7 @@ const Season = ({ episodes, loadModal }) => {
         </h3>
         <div>
           <p>
-            {isValidDate ? (
+            {isValidDate(ep.firstAired) ? (
               <Moment format="MMM DD (YYYY)">{ep.firstAired}</Moment>
             ) : null}
           </p>

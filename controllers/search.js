@@ -1,24 +1,25 @@
-const request = require("request");
+const rp = require("request-promise-native");
 const configureOptions = require("../utils/configureOptions");
 
 exports.handleSeriesSearch = async (req, res) => {
   try {
-    request(
-      configureOptions(
-        `https://api.thetvdb.com/search/series?name=${req.body.searchText}`,
-        "GET",
-        req
-      ),
-      function(err, resp, data) {
-        if (err || data.Error) {
-          if (data.Error) return res.status(401).json(data.Error);
-          if (err) return res.status(401).json(err.message);
-        } else {
-          return res.status(200).json(data);
-        }
-      }
+    const searchOptions = configureOptions(
+      `https://api.thetvdb.com/search/series?name=${req.body.searchText}`,
+      "GET",
+      req
     );
-  } catch (err) {}
+    let response = await rp(searchOptions);
+    return res.status(200).json(response);
+  } catch (err) {
+    if (err.error.Error === "Not authorized") {
+      return res
+        .status(err.statusCode)
+        .json(
+          "Oops! Your token might have expired. Please try refreshing the page to get a new token."
+        );
+    }
+    return res.status(err.statusCode).json(err.error.Error);
+  }
 };
 
 module.exports = exports;

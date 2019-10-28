@@ -1,6 +1,6 @@
 import setToken from "../utils/setToken";
 import axios from "axios";
-import { GET_TOKEN, GET_ERRORS, CLEAR_ERRORS } from "./types";
+import { GET_TOKEN, GET_ERRORS } from "./types";
 
 // Get Token
 export const getToken = () => async dispatch => {
@@ -19,12 +19,4 @@ export const getToken = () => async dispatch => {
       payload: err.response.data
     });
   }
-};
-
-// Clear Errors
-export const clearErrors = () => {
-  return {
-    type: CLEAR_ERRORS,
-    errors: {}
-  };
 };
