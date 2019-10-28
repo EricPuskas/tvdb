@@ -42,9 +42,13 @@ exports.getShow = async (req, res) => {
         id: ep.id,
         airedSeason: ep.airedSeason,
         airedEpisodeNumber: ep.airedEpisodeNumber,
+        firstAired: ep.firstAired,
         overview: ep.overview,
         episodeName: ep.episodeName,
-        filename: ep.filename
+        filename: ep.filename,
+        director: ep.director,
+        siteRating: ep.siteRating,
+        siteRatingCount: ep.siteRatingCount
       });
     });
     if (episodes.links.last > 1) {
@@ -61,9 +65,13 @@ exports.getShow = async (req, res) => {
             id: ep.id,
             airedSeason: ep.airedSeason,
             airedEpisodeNumber: ep.airedEpisodeNumber,
+            firstAired: ep.firstAired,
             overview: ep.overview,
             episodeName: ep.episodeName,
-            filename: ep.filename
+            filename: ep.filename,
+            director: ep.director,
+            siteRating: ep.siteRating,
+            siteRatingCount: ep.siteRatingCount
           });
         });
       }

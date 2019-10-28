@@ -7,6 +7,8 @@ import Footer from "./components/Footer/Footer";
 import jwt_decode from "jwt-decode";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
+// Modals
+import ModalContainer from "./components/Modal/ModalContainer";
 // Actions
 import { getToken } from "./actions/token";
 
@@ -42,6 +44,7 @@ const App = () => {
             <Route exact path="/shows/:id" component={Show} />
           </Switch>
           <Footer />
+          <ModalContainer />
         </div>
       </ScrollToTop>
     </BrowserRouter>

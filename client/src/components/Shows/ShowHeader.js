@@ -7,6 +7,7 @@ const ShowHeader = ({ title, firstAired, network }) => {
   return (
     <>
       <h2> {title} </h2>
+      <hr />
       <p>
         First Aired:{" "}
         <strong>
@@ -20,6 +21,7 @@ const ShowHeader = ({ title, firstAired, network }) => {
       <p>
         Network: <strong>{network ? network : "Unknown"}</strong>{" "}
       </p>
+      <hr />
     </>
   );
 };

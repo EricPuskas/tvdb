@@ -12,3 +12,80 @@ body {
 .container-fluid {
   padding: 0;
 }
+
+.tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tags li {
+  float: left;
+}
+
+.tag {
+  background: #a21616;
+  border-radius: 3px 0 0 3px;
+  color: #fff;
+  display: inline-block;
+  height: 26px;
+  font-size: 1rem;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+}
+
+.tag::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: "";
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag::after {
+  background: #f4f5fa;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #a21616;
+  border-top: 13px solid transparent;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag:hover {
+  background-color: crimson;
+  text-decoration: none;
+  color: white;
+}
+
+.tag:hover::after {
+  border-left-color: crimson;
+}
+
+@media only screen and (max-width: 600px) {
+  .siteRating {
+    display: block;
+    margin: 1rem;
+  }
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

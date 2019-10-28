@@ -24,7 +24,6 @@
   }
   form {
     width: 100%;
-    margin-bottom: 1rem;
     margin-left: 1rem;
   }
   #__listItemProps {
@@ -43,7 +42,6 @@
   max-width: 1200px;
   margin-top: 1rem;
   img {
-    margin-top: 1rem;
     max-width: 100%;
     height: auto;
     display: block;
@@ -58,5 +56,16 @@
     form {
       margin-left: 0;
     }
+  }
+  .SearchResults {
+    #__listItemProps {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      z-index: 999;
+    }
+  }
+  .Logo {
+    margin-bottom: 1rem;
   }
 }

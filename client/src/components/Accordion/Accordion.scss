@@ -1,0 +1,26 @@
+.accordion {
+  border: 1px solid #7d7d7d;
+  padding: 5px 10px;
+  background: #e0e0e0;
+  text-align: center;
+  h2 {
+    font-size: 1.3rem;
+    display: inline;
+  }
+}
+
+.accordion-open {
+  border: 1px solid #f4f5fa;
+  padding: 0;
+  background: #a21616;
+  text-align: center;
+  font-size: 1.5rem;
+  text-align: center;
+  h2 {
+    color: #fff;
+  }
+}
+
+.accordion-body {
+  font-size: 1.1rem;
+}

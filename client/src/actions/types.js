@@ -5,3 +5,5 @@ export const GET_TOKEN = "GET_TOKEN";
 export const SEARCH = "SEARCH";
 export const CLEAN_UP = "CLEAN_UP";
 export const GET_SHOW = "GET_SHOW";
+export const SHOW_MODAL = "SHOW_MODAL";
+export const HIDE_MODAL = "HIDE_MODAL";

@@ -1,0 +1,140 @@
+.Show-Search {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  max-width: 800px;
+}
+
+.Show {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  padding: 0 15px;
+  flex-wrap: wrap;
+  .Logo {
+    max-width: 200px;
+    img {
+      max-width: 100%;
+    }
+  }
+  form {
+    width: 100%;
+    margin-left: 1rem;
+  }
+  #__listItemProps {
+    position: absolute;
+    width: 100%;
+    max-width: 510px;
+    z-index: 999;
+  }
+}
+
+.ShowContainer {
+  margin: 0 1rem;
+  .row:last-child {
+    margin-top: 1rem;
+  }
+}
+.Show-title {
+  text-align: center;
+}
+
+.Show-overview {
+  margin-top: 1rem;
+  background: #e0e0e0;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  color: #585858;
+  border-radius: 15px;
+}
+
+.Show-data {
+  margin-top: 1rem;
+  background: #e0e0e0;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  color: #585858;
+  border-radius: 15px;
+  p {
+    border-bottom: 1px solid #bfbfbf;
+    padding-bottom: 5px;
+  }
+}
+.Show-poster {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Show-Search {
+    flex-direction: column;
+
+    form {
+      margin-left: 0;
+    }
+  }
+}
+
+.styles_overlay__CLSq- {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.Episode {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-bottom: 1px solid gray;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  img {
+    margin-bottom: 1rem;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+}
+
+.Season {
+  border: 1px solid #adadad;
+  background: #e2e2e2;
+}
+
+.Shows-container {
+  h1 {
+    text-align: center;
+  }
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #a21616;
+  border-color: #ad1313;
+  &:active,
+  &:focus,
+  &:focus-within,
+  &:hover {
+    background-color: #5483fa;
+    border-color: #2c68ff;
+  }
+}
+
+.filler {
+  min-height: 65vh;
+}
