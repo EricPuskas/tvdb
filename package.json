@@ -11,13 +11,11 @@
   "author": "Eric Puskas",
   "license": "MIT",
   "dependencies": {
-    "async-request": "^1.2.0",
     "compression": "^1.7.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
     "request": "^2.88.0",
-    "request-promise": "^4.2.4",
     "request-promise-native": "^1.0.7",
     "swagger-ui-express": "^4.1.2"
   }
