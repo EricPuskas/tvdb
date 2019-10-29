@@ -15,11 +15,10 @@ const SearchSuggestions = ({
       highlightedIndex === index ? "rgb(232, 232, 232)" : "#f9f9f9",
     fontWeight: selectedItem && selectedItem === item ? "bold" : "normal"
   });
-
   return (
     <>
       {isOpen && !loading && (
-        <div {...getListItemProps()}>
+        <div {...getListItemProps()} data-test="search-suggestions">
           {items.slice(0, 7).map((item, index) => (
             <div
               {...getItemProps({ item, index })}

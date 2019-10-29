@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchInput Component Renders with no props Should pass snapshot test 1`] = `"<div class=\\"Logo\\" data-test=\\"logo\\"><a href=\\"/\\"><img src=\\"https://res.cloudinary.com/zenipsstudio/image/upload/v1572047365/logo.png\\" alt=\\"TVDB\\"></a></div>"`;
+
+exports[`SearchInput Component Renders with props Should pass snapshot test 1`] = `"<div class=\\"Logo\\" data-test=\\"logo\\"><a href=\\"/\\"><img src=\\"https://res.cloudinary.com/zenipsstudio/image/upload/v1572047365/logo.png\\" alt=\\"TVDB\\"></a><h2 data-test=\\"logo-text\\"> test </h2></div>"`;

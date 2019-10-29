@@ -2,7 +2,7 @@ import React from "react";
 
 const ShowData = ({ status, airsDayOfWeek, airsTime, seasons, episodes }) => {
   return (
-    <div className="ShowData">
+    <div className="ShowData" data-test="showdata">
       <p>
         Status: <strong>{status}</strong>
       </p>

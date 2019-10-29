@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchSuggestions Component Not Opened Should pass snapshot test 1`] = `""`;
+
+exports[`SearchSuggestions Component Opened Should pass snapshot test 1`] = `"<div data-test=\\"search-suggestions\\"><div class=\\"Search-suggestions\\" style=\\"background-color:rgb(232, 232, 232);font-weight:normal\\">13 Reasons Why</div><div class=\\"Search-suggestions\\" style=\\"background-color:#f9f9f9;font-weight:normal\\">Alias</div><div class=\\"Search-suggestions\\" style=\\"background-color:#f9f9f9;font-weight:normal\\">American Horror Story</div><div class=\\"Search-suggestions\\" style=\\"background-color:#f9f9f9;font-weight:normal\\">Arrow</div><div class=\\"Search-suggestions\\" style=\\"background-color:#f9f9f9;font-weight:normal\\">Bates Motel</div><div class=\\"Search-suggestions\\" style=\\"background-color:#f9f9f9;font-weight:normal\\">Better Call Saul</div></div>"`;

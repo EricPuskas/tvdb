@@ -3,7 +3,7 @@ import React from "react";
 const SearchBtn = () => {
   const searchBtnTxt = window.innerWidth <= 600 ? null : "Search";
   return (
-    <div className="input-group-append">
+    <div className="input-group-append" data-test="search-btn">
       <button
         className="btn btn-primary"
         type="submit"

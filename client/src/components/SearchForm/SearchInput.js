@@ -15,7 +15,7 @@ const SearchInput = ({
   loading
 }) => {
   return (
-    <>
+    <div data-test="search-input">
       <div className="input-group mb-3">
         <input
           {...getInputProps({
@@ -39,7 +39,7 @@ const SearchInput = ({
         getListItemProps={getListItemProps}
         items={items}
       />
-    </>
+    </div>
   );
 };
 

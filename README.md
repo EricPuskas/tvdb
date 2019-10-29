@@ -10,6 +10,17 @@
 - `node server.js` in the root of the project to start the server.
 - `cd` into client and `npm start` to boot up the front-end.
 
+## Testing
+
+- `cd` into client and `npm test` to run the tests.
+
+### Test Coverage
+
+- `npm test -- --coverage`
+
+  - `npm test -- --coverage --watchAll=false` in case the test coverage comes up empty.
+  - The flag `--watchALl=false` is required due to some potential issues with jest. [More on that here](https://github.com/facebook/create-react-app/issues/6888)
+
 ## Notes
 
 - You will need to create a .env file in the root of the project

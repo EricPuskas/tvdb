@@ -8,10 +8,12 @@ import NoPosterFound from "../../assets/img/no_poster.png";
 
 const ShowPoster = ({ poster, title }) => {
   return (
-    <div className="ShowPoster">
+    <div className="ShowPoster" data-test="poster">
       <img
         onError={e => replaceImage(e, NoPosterFound)}
-        src={`https://www.thetvdb.com/banners/${poster}`}
+        src={
+          poster ? `https://www.thetvdb.com/banners/${poster}` : NoPosterFound
+        }
         alt={title}
       />
     </div>
