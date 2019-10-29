@@ -7,13 +7,15 @@ const Accordion = ({ children, allowMultipleOpen }) => {
   const [opened, setOpened] = useState({});
   useEffect(() => {
     if (children) {
+      // Check if any are open by default
       children.forEach(child => {
         if (child && child.props.isOpen) {
           openSections[child.props.label] = true;
         }
       });
+      // Set the state
+      setOpened(openSections);
     }
-    setOpened(openSections);
     // eslint-disable-next-line
   }, []);
 
@@ -39,11 +41,11 @@ const Accordion = ({ children, allowMultipleOpen }) => {
           return (
             <AccordionSection
               key={uuid()}
-              isOpen={child && !!opened[child.props.label]}
-              label={child && child.props.label}
+              isOpen={!!opened[child.props.label]}
+              label={child.props.label}
               onClick={onClick}
             >
-              {child && child.props.children}
+              {child.props.children}
             </AccordionSection>
           );
         } else {

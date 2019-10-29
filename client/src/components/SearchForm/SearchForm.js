@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
-import Suggestion from "search-suggestion";
-import escapeRegex from "../../utils/escapeRegex";
+
+//Utilities
 import createSuggestions from "../../utils/createSuggestions";
-import "./SearchInput";
 import tvShows from "../../utils/tvShows";
+import escapeRegex from "../../utils/escapeRegex";
+
+//Components
 import SearchInput from "./SearchInput";
+import Suggestion from "search-suggestion";
+
+//SCSS
 import "./SearchForm.scss";
 
 const SearchForm = ({

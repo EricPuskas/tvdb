@@ -1,4 +1,6 @@
 import React from "react";
+import NoImageFound from "../../../assets/img/no_image.png";
+import replaceImage from "../../../utils/replaceImage";
 
 const ModalContent = ({
   episode,
@@ -28,6 +30,7 @@ const ModalContent = ({
           <div className="col-12 text-center">
             <div className="Image-container">
               <img
+                onError={e => replaceImage(e, NoImageFound)}
                 src={`https://www.thetvdb.com/banners/${image}`}
                 alt={title}
               />

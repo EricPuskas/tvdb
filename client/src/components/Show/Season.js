@@ -1,29 +1,35 @@
 import React from "react";
 import Moment from "react-moment";
-import isValidDate from "../../utils/isValidDate";
-import Rating from "react-rating";
 import { connect } from "react-redux";
+
+// Actions
 import { loadModal } from "../../actions/modal";
+
+// Utils
+import isValidDate from "../../utils/isValidDate";
 import replaceImage from "../../utils/replaceImage";
+
+// Components
 import NoImageFound from "../../assets/img/no_image.png";
+import Rating from "react-rating";
 
 const Season = ({ episodes, loadModal }) => {
   const content = episodes.map(ep => {
-    let MODAL_PROPS = {
-      id: ep.id,
-      title: ep.episodeName,
-      width: "45%",
-      left: "30%",
-      top: "5%",
-      header: ep.episodeName,
-      director: ep.director,
-      image: ep.filename,
-      overview: ep.overview,
-      episode: ep.airedEpisodeNumber
-    };
     const triggerModal = () => {
-      loadModal("EPISODE_MODAL", MODAL_PROPS);
+      loadModal("EPISODE_MODAL", {
+        id: ep.id,
+        title: ep.episodeName,
+        width: "60%",
+        left: "20%",
+        top: "5%",
+        header: ep.episodeName,
+        director: ep.director,
+        image: ep.filename,
+        overview: ep.overview,
+        episode: ep.airedEpisodeNumber
+      });
     };
+
     return (
       <div key={ep.id} className="Episode">
         <h3>

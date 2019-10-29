@@ -1,3 +1,4 @@
+@import "../../assets/styles/variables";
 .ShowItem {
   display: flex;
   justify-content: center;
@@ -7,7 +8,7 @@
   margin-bottom: 1rem;
   padding: 1rem;
   font-size: 1.1rem;
-  background-color: #ffffff;
+  background-color: $showitem-background;
   box-shadow: 0px 0px 3px 1px #b7b7b7;
   color: rgb(56, 56, 56);
   margin-top: 1rem;
@@ -32,7 +33,7 @@
     text-align: start;
   }
   &:hover {
-    background-color: #eaeaea;
+    background-color: $showitem-background-hover;
     cursor: pointer;
     text-decoration: none;
     color: rgb(78, 78, 78);

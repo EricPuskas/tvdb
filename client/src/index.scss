@@ -1,12 +1,13 @@
+@import "./assets/styles/variables";
 body {
   margin: 0;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: $main-font, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f4f5fa;
-  font-size: 20px;
+  background: $background-color;
+  font-size: $default-font-size;
 }
 
 p {
@@ -31,9 +32,9 @@ p {
 }
 
 .tag {
-  background: #a21616;
+  background: $tag-background-color;
   border-radius: 3px 0 0 3px;
-  color: #fff;
+  color: $tag-color;
   display: inline-block;
   height: 26px;
   font-size: 1rem;
@@ -90,15 +91,15 @@ img {
   display: flex;
   margin: 1rem;
   justify-content: center;
-  color: #a21616;
+  color: $error-text-color;
 }
 
 .far.fa-star {
-  color: #5483fa;
+  color: $rating-color;
 }
 
 .fas.fa-star:before {
-  color: #5483fa;
+  color: $rating-color;
 }
 
 .btn-primary {
@@ -107,16 +108,16 @@ img {
   padding: 0.5rem 1rem;
   font-size: 1.1rem;
   color: #fff;
-  background-color: #a21616;
-  border-color: #a21616;
+  background-color: $accent-color;
+  border-color: $accent-color;
   text-shadow: 2px 1px 3px black;
   &:not(:disabled):not(.disabled):active,
   &:focus,
   &:active,
   &:hover {
     color: #fff;
-    background-color: #5483fa;
-    border-color: #5483fa;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
   }
   .fas.fa-search {
     margin-right: 0.25rem;
