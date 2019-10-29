@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchFeed Component Missing Overview Prop Should pass snapshot test 1`] = `"<div data-test=\\"search-feed\\"><div class=\\"SearchFeed\\"></div></div>"`;
+
+exports[`SearchFeed Component with Props Should pass snapshot test 1`] = `
+"<BrowserRouter>
+  <Router history={{...}}>
+    <Memo(SearchFeed) search_results={{...}} error={{...}} displaySearchText=\\"ABC\\" loading={false}>
+      <div data-test=\\"search-feed\\">
+        <p className=\\"text-center\\" data-test=\\"results\\">
+          Found 
+          3
+           
+          results
+           matching &quot;
+          <strong>
+            ABC
+          </strong>
+          &quot;.
+        </p>
+        <div className=\\"SearchFeed\\">
+          <ShowItem show={{...}}>
+            <div className=\\"ShowItem\\" data-test=\\"showitem\\">
+              <Link to=\\"/shows/1\\">
+                <LinkAnchor href=\\"/shows/1\\" navigate={[Function: navigate]}>
+                  <a href=\\"/shows/1\\" onClick={[Function: onClick]}>
+                    <div className=\\"row\\">
+                      <div className=\\"col-lg-3 col-12\\">
+                        <ShowHeader title={[undefined]} firstAired={[undefined]} network={[undefined]}>
+                          <h2>
+                             
+                             
+                          </h2>
+                          <hr />
+                          <div>
+                            First Aired:
+                             
+                            <strong data-test=\\"firstAired\\">
+                              <t format=\\"MMM DD (YYYY)\\" element={{...}} fromNow={false} toNow={false} calendar={false} ago={false} unix={false} utc={false} local={false} unit={{...}} withTitle={false} decimal={false} titleFormat=\\"\\" interval={60000} filter={[Function: filter]} onChange={[Function: onChange]}>
+                                <time dateTime={{...}}>
+                                  Oct 29 (2019)
+                                </time>
+                              </t>
+                            </strong>
+                          </div>
+                          <div>
+                            Network:
+                             
+                            <strong data-test=\\"network\\">
+                              Unknown
+                            </strong>
+                          </div>
+                          <hr />
+                        </ShowHeader>
+                      </div>
+                      <div className=\\"col-lg-9 col-12\\">
+                        <ShowBanner banner={[undefined]} title={[undefined]}>
+                          <img data-test=\\"banner\\" onError={[Function: onError]} src=\\"no_banner.png\\" alt={[undefined]} />
+                        </ShowBanner>
+                      </div>
+                      <div className=\\"col-12 overview\\">
+                        <ShowDescription maxChars={350} overview=\\"ABCD\\">
+                          <div data-test=\\"description\\">
+                            <h3>
+                              Overview:
+                            </h3>
+                            <p data-test=\\"overview\\">
+                              ABCD
+                            </p>
+                          </div>
+                        </ShowDescription>
+                      </div>
+                    </div>
+                  </a>
+                </LinkAnchor>
+              </Link>
+            </div>
+          </ShowItem>
+          <ShowItem show={{...}}>
+            <div className=\\"ShowItem\\" data-test=\\"showitem\\">
+              <Link to=\\"/shows/2\\">
+                <LinkAnchor href=\\"/shows/2\\" navigate={[Function: navigate]}>
+                  <a href=\\"/shows/2\\" onClick={[Function: onClick]}>
+                    <div className=\\"row\\">
+                      <div className=\\"col-lg-3 col-12\\">
+                        <ShowHeader title={[undefined]} firstAired={[undefined]} network={[undefined]}>
+                          <h2>
+                             
+                             
+                          </h2>
+                          <hr />
+                          <div>
+                            First Aired:
+                             
+                            <strong data-test=\\"firstAired\\">
+                              <t format=\\"MMM DD (YYYY)\\" element={{...}} fromNow={false} toNow={false} calendar={false} ago={false} unix={false} utc={false} local={false} unit={{...}} withTitle={false} decimal={false} titleFormat=\\"\\" interval={60000} filter={[Function: filter]} onChange={[Function: onChange]}>
+                                <time dateTime={{...}}>
+                                  Oct 29 (2019)
+                                </time>
+                              </t>
+                            </strong>
+                          </div>
+                          <div>
+                            Network:
+                             
+                            <strong data-test=\\"network\\">
+                              Unknown
+                            </strong>
+                          </div>
+                          <hr />
+                        </ShowHeader>
+                      </div>
+                      <div className=\\"col-lg-9 col-12\\">
+                        <ShowBanner banner={[undefined]} title={[undefined]}>
+                          <img data-test=\\"banner\\" onError={[Function: onError]} src=\\"no_banner.png\\" alt={[undefined]} />
+                        </ShowBanner>
+                      </div>
+                      <div className=\\"col-12 overview\\">
+                        <ShowDescription maxChars={350} overview=\\"ABCD\\">
+                          <div data-test=\\"description\\">
+                            <h3>
+                              Overview:
+                            </h3>
+                            <p data-test=\\"overview\\">
+                              ABCD
+                            </p>
+                          </div>
+                        </ShowDescription>
+                      </div>
+                    </div>
+                  </a>
+                </LinkAnchor>
+              </Link>
+            </div>
+          </ShowItem>
+          <ShowItem show={{...}}>
+            <div className=\\"ShowItem\\" data-test=\\"showitem\\">
+              <Link to=\\"/shows/3\\">
+                <LinkAnchor href=\\"/shows/3\\" navigate={[Function: navigate]}>
+                  <a href=\\"/shows/3\\" onClick={[Function: onClick]}>
+                    <div className=\\"row\\">
+                      <div className=\\"col-lg-3 col-12\\">
+                        <ShowHeader title={[undefined]} firstAired={[undefined]} network={[undefined]}>
+                          <h2>
+                             
+                             
+                          </h2>
+                          <hr />
+                          <div>
+                            First Aired:
+                             
+                            <strong data-test=\\"firstAired\\">
+                              <t format=\\"MMM DD (YYYY)\\" element={{...}} fromNow={false} toNow={false} calendar={false} ago={false} unix={false} utc={false} local={false} unit={{...}} withTitle={false} decimal={false} titleFormat=\\"\\" interval={60000} filter={[Function: filter]} onChange={[Function: onChange]}>
+                                <time dateTime={{...}}>
+                                  Oct 29 (2019)
+                                </time>
+                              </t>
+                            </strong>
+                          </div>
+                          <div>
+                            Network:
+                             
+                            <strong data-test=\\"network\\">
+                              Unknown
+                            </strong>
+                          </div>
+                          <hr />
+                        </ShowHeader>
+                      </div>
+                      <div className=\\"col-lg-9 col-12\\">
+                        <ShowBanner banner={[undefined]} title={[undefined]}>
+                          <img data-test=\\"banner\\" onError={[Function: onError]} src=\\"no_banner.png\\" alt={[undefined]} />
+                        </ShowBanner>
+                      </div>
+                      <div className=\\"col-12 overview\\">
+                        <ShowDescription maxChars={350} overview=\\"ABCD\\">
+                          <div data-test=\\"description\\">
+                            <h3>
+                              Overview:
+                            </h3>
+                            <p data-test=\\"overview\\">
+                              ABCD
+                            </p>
+                          </div>
+                        </ShowDescription>
+                      </div>
+                    </div>
+                  </a>
+                </LinkAnchor>
+              </Link>
+            </div>
+          </ShowItem>
+        </div>
+      </div>
+    </Memo(SearchFeed)>
+  </Router>
+</BrowserRouter>"
+`;

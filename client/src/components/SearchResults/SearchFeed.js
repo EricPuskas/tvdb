@@ -14,7 +14,7 @@ const SearchFeed = ({ search_results, error, displaySearchText, loading }) => {
 
   const matchingText =
     results_count.length > 0 ? (
-      <p className="text-center">
+      <p className="text-center" data-test="results">
         Found {results_count.length}{" "}
         {results_count.length === 1 ? "result" : "results"} matching "
         <strong>{displaySearchText}</strong>".
@@ -22,12 +22,12 @@ const SearchFeed = ({ search_results, error, displaySearchText, loading }) => {
     ) : null;
 
   return (
-    <>
+    <div data-test="search-feed">
       {matchingText}
       {loading && !error && <Loader />}
       {!error && !loading && <div className="SearchFeed">{results}</div>}
       {error && <h3 className="Error"> {error} </h3>}
-    </>
+    </div>
   );
 };
 

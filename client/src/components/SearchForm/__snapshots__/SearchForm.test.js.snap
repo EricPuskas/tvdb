@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm Component Should pass snapshot test 1`] = `"<form autocomplete=\\"off\\" data-test=\\"search-form\\"><div class=\\"form-group\\"><div id=\\"autoComplete\\"><div data-test=\\"search-input\\"><div class=\\"input-group mb-3\\"><input id=\\"__inputItemProps\\" placeholder=\\"Find your favorite shows\\" class=\\"form-control\\" type=\\"search\\" aria-label=\\"Search Input\\" value=\\"\\"><div class=\\"input-group-append\\" data-test=\\"search-btn\\"><button class=\\"btn btn-primary\\" type=\\"submit\\" aria-label=\\"Search Button\\"><i class=\\"fas fa-search\\"></i> Search</button></div></div></div></div></div></form>"`;

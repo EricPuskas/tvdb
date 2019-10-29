@@ -72,7 +72,11 @@ const SearchForm = ({
     handleSearch(item);
   };
   return (
-    <form onSubmit={e => handleSearchForm(e)} autoComplete="off">
+    <form
+      onSubmit={e => handleSearchForm(e)}
+      autoComplete="off"
+      data-test="search-form"
+    >
       <div className="form-group">
         <Suggestion
           items={suggestions}
