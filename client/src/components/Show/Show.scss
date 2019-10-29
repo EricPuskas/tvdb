@@ -106,14 +106,14 @@
   .tag:hover::after {
     border-left-color: crimson;
   }
+}
 
-  .far.fa-star {
-    color: $rating-color;
-  }
+.far.fa-star {
+  color: $rating-color;
+}
 
-  .fas.fa-star:before {
-    color: $rating-color;
-  }
+.fas.fa-star:before {
+  color: $rating-color;
 }
 
 .ShowOverview {
