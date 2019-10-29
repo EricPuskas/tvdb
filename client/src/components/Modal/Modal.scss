@@ -1,4 +1,4 @@
-.modal-overlay-div {
+.ModalOverlay {
   position: fixed;
   top: 0;
   right: 0;
@@ -10,7 +10,7 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.modal-content-div {
+.ModalContentContainer {
   position: fixed;
   top: 0;
   right: 0;
@@ -30,13 +30,14 @@
   }
   p {
     text-align: start;
+    font-size: 1rem;
   }
   img {
     max-width: 100%;
   }
 }
 
-.modal-dialog-div {
+.ModalDialog {
   position: fixed;
   outline: 0;
   display: inline-block;
@@ -54,7 +55,7 @@
   color: #fff;
 }
 
-.modal-content {
+.ModalContent {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -80,7 +81,7 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  border-top: none;
+  border-top: 1px solid #0000002e;
 }
 
 .close {
@@ -92,34 +93,34 @@
   opacity: 1;
 }
 
-.modal-overlay-div-appear {
+.ModalOverlay-appear {
   opacity: 0;
 }
 
-.modal-overlay-div-appear.modal-overlay-div-appear-active {
+.ModalOverlay-appear.ModalOverlay-appear-active {
   opacity: 1;
   transition: opacity 0.2s ease-in;
 }
 
-.modal-dialog-div-appear {
+.ModalDialog-appear {
   opacity: 0;
-  top: 5% !important;
+  top: -5% !important;
 }
 
-.modal-dialog-div-appear.modal-dialog-div-appear-active {
+.ModalDialog-appear.ModalDialog-appear-active {
   opacity: 1;
-  top: 10% !important;
-  transition: all 0.3s ease-in;
+  top: 5% !important;
+  transition: all 0.2s ease-in;
 }
 
-.fade-overlay {
+.FadeOverlay {
   opacity: 0;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
-.fade-dialog {
+.FadeDialog {
   top: 5% !important;
   opacity: 0;
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .modal-header {
@@ -135,7 +136,7 @@
   right: 10px;
 }
 @media only screen and (max-width: 600px) {
-  .modal-content {
+  .ModalContent {
     height: 100vh;
     overflow: scroll;
   }
@@ -153,28 +154,28 @@
     right: 15px;
     top: 7px;
   }
-  .modal-dialog-div {
+  .ModalDialog {
     width: 100% !important;
-    left: 1% !important;
+    left: 0% !important;
     top: 0% !important;
   }
 
-  .modal-dialog-div-appear {
+  .ModalDialog-appear {
     opacity: 0;
     top: 5% !important;
   }
 
-  .modal-dialog-div-appear.modal-dialog-div-appear-active {
+  .ModalDialog-appear.ModalDialog-appear-active {
     opacity: 1;
     top: 0% !important;
     transition: all 0.2s ease-in;
   }
 
-  .fade-overlay {
+  .FadeOverlay {
     opacity: 0;
     transition: all 0.2s;
   }
-  .fade-dialog {
+  .FadeDialog {
     top: 5% !important;
     opacity: 0;
     transition: all 0.2s ease-in;

@@ -5,7 +5,6 @@ import Loader from "../Loader/Loader";
 
 const SearchFeed = ({ search_results, error, displaySearchText, loading }) => {
   const results_count = [];
-
   const results = search_results.map(show => {
     if (show.overview) {
       results_count.push(show.id);
@@ -26,9 +25,7 @@ const SearchFeed = ({ search_results, error, displaySearchText, loading }) => {
     <>
       {matchingText}
       {loading && !error && <Loader />}
-      {!error && !loading && (
-        <div className="SearchResults-results">{results}</div>
-      )}
+      {!error && !loading && <div className="SearchFeed">{results}</div>}
       {error && <h3 className="Error"> {error} </h3>}
     </>
   );

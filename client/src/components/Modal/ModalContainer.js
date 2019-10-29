@@ -9,13 +9,11 @@ const MODAL_COMPONENTS = {
   EPISODE_MODAL: EpisodeModal
 };
 
-const ModalContainer = props => {
-  if (!props.modal.type) {
-    return null;
-  }
+const ModalContainer = ({ modal: { type, props } }) => {
+  if (!type) return null;
 
-  const SpecificModal = MODAL_COMPONENTS[props.modal.type];
-  return <SpecificModal props={props.modal.props} />;
+  const ModalComponent = MODAL_COMPONENTS[type];
+  return <ModalComponent props={props} />;
 };
 
 const mapStateToProps = state => ({

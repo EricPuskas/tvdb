@@ -32,7 +32,7 @@ const SearchResults = ({
 
   return (
     <div className="SearchResults">
-      <div className="SearchResults-Search">
+      <div className="SearchResults-SearchForm">
         <Logo />
         <SearchForm
           history={history}

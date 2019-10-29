@@ -34,7 +34,7 @@ const Show = ({ getShow, match, shows, history, errors }) => {
         return (
           <div
             label={`Season ${index === 0 ? index + 1 : index}`}
-            isOpen={index === 0 ? true : false}
+            isOpen={index === 1 ? true : false}
             key={uuid()}
             className="Shows-container"
           >
@@ -170,7 +170,7 @@ const Show = ({ getShow, match, shows, history, errors }) => {
         ) : (
           <>
             {content}
-            <div className="filler" />
+            {error && <div className="filler" />}
           </>
         )}
       </div>

@@ -12,9 +12,9 @@ const Season = ({ episodes, loadModal }) => {
     let MODAL_PROPS = {
       id: ep.id,
       title: ep.episodeName,
-      width: "40%",
+      width: "45%",
       left: "30%",
-      top: "10%",
+      top: "5%",
       header: ep.episodeName,
       director: ep.director,
       image: ep.filename,
