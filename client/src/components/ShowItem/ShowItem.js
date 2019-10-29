@@ -5,7 +5,7 @@ import ShowHeader from "./ShowHeader";
 import ShowBanner from "./ShowBanner";
 import ShowDescription from "./ShowDescription";
 
-import "./Shows.scss";
+import "./ShowItem.scss";
 
 const ShowItem = ({ show }) => {
   if (show) {

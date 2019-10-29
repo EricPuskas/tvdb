@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import ShowItem from "../Shows/ShowItem";
+import ShowItem from "../ShowItem/ShowItem";
 import uuid from "uuid/v4";
 import Loader from "../Loader/Loader";
 

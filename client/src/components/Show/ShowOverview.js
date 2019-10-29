@@ -2,7 +2,7 @@ import React from "react";
 
 const ShowOverview = ({ description }) => {
   return (
-    <div className="Show-overview">
+    <div className="ShowOverview">
       <p> {description} </p>
     </div>
   );

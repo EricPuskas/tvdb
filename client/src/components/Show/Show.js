@@ -70,7 +70,7 @@ const Show = ({ getShow, match, shows, history, errors }) => {
     return (
       <div>
         <div className="Show">
-          <div className="Show-Search">
+          <div className="Show-SearchForm">
             <Logo />
             <SearchForm history={history} loading={loading} />
           </div>

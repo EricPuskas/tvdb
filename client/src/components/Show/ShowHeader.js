@@ -3,7 +3,7 @@ import Rating from "react-rating";
 
 const ShowHeader = ({ title, genres, rating, ratingText }) => {
   return (
-    <div className="Show-title">
+    <div className="ShowHeader">
       <h1> {title} </h1>
       <ul className="tags">{genres}</ul>
       <div>
