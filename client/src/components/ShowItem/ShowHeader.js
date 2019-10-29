@@ -9,7 +9,7 @@ const ShowHeader = ({ title, firstAired, network }) => {
       <hr />
       <div>
         First Aired:{" "}
-        <strong>
+        <strong data-test="firstAired">
           {isValidDate(firstAired) ? (
             <Moment format="MMM DD (YYYY)">{firstAired}</Moment>
           ) : (
@@ -18,7 +18,8 @@ const ShowHeader = ({ title, firstAired, network }) => {
         </strong>
       </div>
       <div>
-        Network: <strong>{network ? network : "Unknown"}</strong>
+        Network:{" "}
+        <strong data-test="network">{network ? network : "Unknown"}</strong>
       </div>
       <hr />
     </>

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Show Header Component Invalid data for Network and Date Should pass snapshot test 1`] = `"<h2> Arrow </h2><hr/><div>First Aired: <strong data-test=\\"firstAired\\">Unknown</strong></div><div>Network: <strong data-test=\\"network\\">Unknown</strong></div><hr/>"`;
+
+exports[`Show Header Component Valid data for Network and Date Should pass snapshot test 1`] = `"<h2> Arrow </h2><hr/><div>First Aired: <strong data-test=\\"firstAired\\"><time dateTime=\\"1490907600000\\">Mar 31 (2017)</time></strong></div><div>Network: <strong data-test=\\"network\\">HBO</strong></div><hr/>"`;

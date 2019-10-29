@@ -10,7 +10,7 @@ import "./ShowItem.scss";
 const ShowItem = ({ show }) => {
   if (show) {
     return (
-      <div className="ShowItem">
+      <div className="ShowItem" data-test="showitem">
         <Link to={`/shows/${show.id}`}>
           <div className="row">
             <div className="col-lg-3 col-12">

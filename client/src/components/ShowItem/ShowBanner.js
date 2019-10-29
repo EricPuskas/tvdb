@@ -5,8 +5,9 @@ import replaceImage from "../../utils/replaceImage";
 const ShowBanner = ({ banner, title }) => {
   return (
     <img
+      data-test="banner"
       onError={e => replaceImage(e, NoBannerFound)}
-      src={`https://www.thetvdb.com/banners/${banner}`}
+      src={banner ? `https://www.thetvdb.com/banners/${banner}` : NoBannerFound}
       alt={title}
     />
   );

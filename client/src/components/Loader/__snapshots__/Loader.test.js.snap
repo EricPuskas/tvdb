@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader Component Should pass snapshot test 1`] = `"<div class=\\"Loader\\" data-test=\\"loader\\"><img src=\\"rolling.svg\\" data-test=\\"rolling\\" alt=\\"Loading...\\"/><h2> Loading... </h2></div>"`;

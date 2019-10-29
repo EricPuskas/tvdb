@@ -7,10 +7,10 @@ const ShowDescription = ({ overview, maxChars }) => {
     if (overview.length > maxChars) description += "...";
   }
   return (
-    <>
+    <div data-test="description">
       <h3>Overview:</h3>
-      <p>{description}</p>
-    </>
+      <p data-test="overview">{description}</p>
+    </div>
   );
 };
 

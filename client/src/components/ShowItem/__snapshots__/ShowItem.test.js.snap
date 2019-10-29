@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Show Item Component Gets No Props Should pass snapshot test 1`] = `null`;
+
+exports[`Show Item Component Gets Props Should pass snapshot test 1`] = `"<div class=\\"ShowItem\\" data-test=\\"showitem\\"><a href=\\"/shows/12345\\"><div class=\\"row\\"><div class=\\"col-lg-3 col-12\\"><h2>  </h2><hr><div>First Aired: <strong data-test=\\"firstAired\\"><time datetime=\\"1490907600000\\">Mar 31 (2017)</time></strong></div><div>Network: <strong data-test=\\"network\\">The CW</strong></div><hr></div><div class=\\"col-lg-9 col-12\\"><img data-test=\\"banner\\" src=\\"https://www.thetvdb.com/banners/graphical/257655-g9.jpg\\"></div><div class=\\"col-12 overview\\"><div data-test=\\"description\\"><h3>Overview:</h3><p data-test=\\"overview\\">Lorem Ipsum Etc etc</p></div></div></div></a></div>"`;

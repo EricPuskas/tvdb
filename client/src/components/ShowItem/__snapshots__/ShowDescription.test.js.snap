@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Show Description Component Description equal or under 350 chars Should pass snapshot test 1`] = `"<div data-test=\\"description\\"><h3>Overview:</h3><p data-test=\\"overview\\">After a violent shipwreck, playboy billionaire Oliver Queen had disappeared and been presumed dead for five years before being discovered alive on a remote island in the Pacific. When he returns home to Starling City, his devoted mother Moira, the beloved sister Thea, and his best friend Tommy are going to welcome him home, but they have the feelin</p></div>"`;
+
+exports[`Show Description Component Description over 350 chars Should pass snapshot test 1`] = `"<div data-test=\\"description\\"><h3>Overview:</h3><p data-test=\\"overview\\">After a violent shipwreck, playboy billionaire Oliver Queen had disappeared and been presumed dead for five years before being discovered alive on a remote island in the Pacific. When he returns home to Starling City, his devoted mother Moira, the beloved sister Thea, and his best friend Tommy are going to welcome him home, but they have the feelin...</p></div>"`;

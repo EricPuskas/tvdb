@@ -4,8 +4,8 @@ import "./Loader.scss";
 
 const Loader = () => {
   return (
-    <div className="Loader">
-      <img src={Rolling} alt="Loading..." />
+    <div className="Loader" data-test="loader">
+      <img src={Rolling} data-test="rolling" alt="Loading..." />
       <h2> Loading... </h2>
     </div>
   );
