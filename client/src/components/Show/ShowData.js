@@ -1,10 +1,20 @@
 import React from "react";
 
-const ShowData = ({ status, airsDayOfWeek, airsTime, seasons, episodes }) => {
+const ShowData = ({
+  network,
+  status,
+  airsDayOfWeek,
+  airsTime,
+  seasons,
+  episodes
+}) => {
   return (
     <div className="ShowData" data-test="showdata">
       <p>
         Status: <strong>{status}</strong>
+      </p>
+      <p>
+        Network: <strong>{network}</strong>
       </p>
       <p>
         Airs:{" "}

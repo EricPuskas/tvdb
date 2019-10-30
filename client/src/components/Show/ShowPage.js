@@ -18,6 +18,7 @@ const ShowPage = ({ show_info, seasons, totalEpisodes }) => {
       siteRatingCount,
       seriesName,
       overview,
+      network,
       status,
       airsDayOfWeek,
       airsTime
@@ -55,6 +56,7 @@ const ShowPage = ({ show_info, seasons, totalEpisodes }) => {
         </div>
         <div className="col-lg-3 col-12">
           <ShowData
+            network={network}
             status={status}
             airsDayOfWeek={airsDayOfWeek}
             airsTime={airsTime}

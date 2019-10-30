@@ -37,6 +37,7 @@ const Season = ({ episodes, loadModal }) => {
         </h3>
         <div>
           <p>
+            Aired on{" "}
             {isValidDate(ep.firstAired) ? (
               <Moment format="MMM DD (YYYY)">{ep.firstAired}</Moment>
             ) : null}
