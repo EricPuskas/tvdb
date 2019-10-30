@@ -4,6 +4,7 @@ import SearchSuggestions from "./SearchSuggestions";
 
 const SearchInput = ({
   getInputProps,
+  error,
   selectedItem,
   highlightedIndex,
   getItemProps,
@@ -30,6 +31,7 @@ const SearchInput = ({
         <SearchBtn />
       </div>
       <SearchSuggestions
+        error={error}
         loading={loading}
         searchText={searchText}
         getItemProps={getItemProps}

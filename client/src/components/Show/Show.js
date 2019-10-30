@@ -72,7 +72,7 @@ const Show = ({ getShow, match, shows, history, errors }) => {
         <div className="Show">
           <div className="Show-SearchForm">
             <Logo />
-            <SearchForm history={history} loading={loading} />
+            <SearchForm history={history} loading={loading} error={error} />
           </div>
         </div>
 

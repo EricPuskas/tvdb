@@ -14,6 +14,7 @@ import "./SearchForm.scss";
 
 const SearchForm = ({
   history,
+  error,
   loading,
   displaySearchText,
   clearErrors,
@@ -85,6 +86,7 @@ const SearchForm = ({
           {props => (
             <SearchInput
               {...props}
+              error={error}
               loading={loading}
               onSearchChange={onSearchChange}
               searchText={searchText}

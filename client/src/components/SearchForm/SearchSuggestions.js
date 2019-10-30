@@ -4,6 +4,7 @@ import uuid from "uuid/v4";
 const SearchSuggestions = ({
   isOpen,
   loading,
+  error,
   getItemProps,
   highlightedIndex,
   getListItemProps,
@@ -17,7 +18,7 @@ const SearchSuggestions = ({
   });
   return (
     <>
-      {isOpen && !loading && (
+      {((isOpen && !loading) || error) && (
         <div {...getListItemProps()} data-test="search-suggestions">
           {items.slice(0, 7).map((item, index) => (
             <div
